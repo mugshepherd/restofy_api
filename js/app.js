@@ -1,13 +1,18 @@
 $(document).ready(function(){
 
 
+restaurant = new Restaurant()
+allRestaurants = new AllRestaurants(restaurant)
+
+
+
  L.mapbox.accessToken = 'pk.eyJ1IjoidHNjaGFlZmZlcjc1MDQiLCJhIjoibGtEVEpDTSJ9.Ii90udJG3hfV3ftGYafKLQ';
 
   	var map = L.mapbox.map('map', 'tschaeffer7504.mbaooln6').setView([38.899, -77.015], 12);
   	map.scrollWheelZoom.disable();
   	var listings = document.getElementById('listings');
   	var locations = L.mapbox.featureLayer().addTo(map);
-    locations.setGeoJSON(restaurants);
+    locations.setGeoJSON(allRestaurants);
 
   	function setActive(el) {
   		var siblings = listings.getElementsByTagName('div');

@@ -1,7 +1,6 @@
 var AllRestaurants = function(){
   this.restaurants = []
-  this.fetchRestaurants();
-  this.fetchDetails();
+  this.fetchRestaurants()
   return this.restaurants
 }
 
@@ -12,19 +11,19 @@ AllRestaurants.prototype = {
       dataType: 'jsonp',
       url: "http://grahamimac.com/inspectionmapper/allrest_id.php?callback=?"
     }).done(function(response) {
-      allRestaurantsModel.loadRestaurants(response);
+      this.prototype.loadRestaurants(response);
     }).fail(function(response){
       console.log("js failed to load")
     })
   },
 
-  fetchDetails: function(callback){
+  fetchDetails: function(pid, callback){
     $.ajax({
       type: 'GET',
       dataType: 'jsonp',
       url: "http://grahamimac.com/inspectionmapper/onerest.php?callback=<String>&permitid="
     }).done(function(response) {
-      allRestaurantsModel.loadDetails(response);
+      allRestaurants.loadDetails(pid, response);
     }).fail(function(response){
       console.log("js failed to load")
     })
@@ -38,11 +37,11 @@ AllRestaurants.prototype = {
     }
   },
 
-  loadDetails: function(response) {
-    this.restaurants = restaurant_detailed
+  loadDetails: function(pid, response) {
+    restaurant_detailed = []
     for(var i = 0; i < response.length; i++){
       var restaurant_detailed = Restaurant[pid](response[i].coords, response[i].totals, response[i].violations);
-      this.restaurants.push(restaurant);
+      this.restaurants.push(restaurant_detailed);
     }
   }
 }
