@@ -6,6 +6,8 @@ var Restaurant = function(pid, addr, name, coords, totals, violations){
   this.totals = totals;
   this.violations = violations;
 }
+
+
 // }
 
 //   function getRestoData () {

@@ -1,3 +1,7 @@
+// this was originally the first restaurants.js file I had.  I was testing to make sure I could access the API, and realized that I couldn't figure out the second API call.  That had me thinking that I needed to abstract them out to sepearate allRestaurants.js and restaurant.js files.  But I'm not doing that right...
+
+
+
 // $(document).ready(function () {
 	
 // 	var restaurantsDetails = {}
@@ -52,19 +56,6 @@
     // 		$('#RestaurantDiv').append('<div>'+ name + '</div>')
     // 	})
 
-
-//this had a nested loop
-//// working, but printing out each item three times to screen.  
- 		// restos = resp.results
-   //  for(var i = 0, l = restos.length; i < l; i++) {
-   //  	var obj = restos[i];
-   //  	name = obj.name
-
-   //  	// console.log(obj.name),
-   //  	$.each(obj, function(i){
-   //  		$('#RestaurantDiv').append('<div>'+ name + '</div>')
-   //  	})
-   //  };
 
 
 
