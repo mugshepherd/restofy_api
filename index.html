@@ -1,4 +1,6 @@
-<!DOCTYPE html> <!-- It's important to fix the missing '<', since this statement makes this document an html5 doc, as opposed to other forms of html. -->
+<!DOCTYPE html> 
+<!-- ts:  this was just careless on my part.  I missed the left carrot  -->
+<!-- It's important to fix the missing '<', since this statement makes this document an html5 doc, as opposed to other forms of html. -->
 <html>
   <head>
     <title>RestofyApi</title>
@@ -21,6 +23,7 @@
     <h1>DC Restaurants</h1>
     <div id="RestaurantDiv"></div>
 
+    <!-- ts:  the current concensus seems to be to have them in the head but with the "async" or "defer" attribute at the end of the script.   the old approach was having it at the end though.  Or am I missing something?-->
     <!-- Moved all scripts to the bottom. Reason here: http://stackoverflow.com/questions/436411/where-is-the-best-place-to-put-script-tags-in-html-markup -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
