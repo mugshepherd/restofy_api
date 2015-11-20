@@ -4,9 +4,9 @@
 <html>
   <head>
     <title>RestofyApi</title>
-    <meta charset="utf-8"> <!-- not really needed, but to be valid, make sure to quote the value -->
+    <meta charset="utf-8"> 
     <link rel="stylesheet" href="application.css">
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'> <!-- is this used? -->
+<!--     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>  -->
     <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' >
   </head>
   <body>
@@ -18,19 +18,21 @@
       <div id='listings' class='listings'></div>
     </div>
   
-    <div id='map' class='map'> </div>
+    <div id="placeholder"></div>
+
+    <!-- <div id='map' class='map'> </div> //commented out until I can get the coordinates for each address -->
     
     <h1>DC Restaurants</h1>
     <div id="RestaurantDiv"></div>
 
-    <!-- ts:  the current concensus seems to be to have them in the head but with the "async" or "defer" attribute at the end of the script.   the old approach was having it at the end though.  Or am I missing something?-->
-    <!-- Moved all scripts to the bottom. Reason here: http://stackoverflow.com/questions/436411/where-is-the-best-place-to-put-script-tags-in-html-markup -->
+
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
     <script src="js/app.js"></script>
+    <!-- // <script src="js/restaurants.js"></script> -->
     <script src="js/models/restaurant.js"></script>
     <script src="js/models/allrestaurants.js"></script>
     <script src="js/views/restaurant.js"></script>
-    <script src="js/views/allrestaurants.js"></script>
+    <script src="js/views/allrestaurants.js"></script> 
   </body>
 </html>

@@ -1,6 +1,32 @@
 // this was originally the first restaurants.js file I had.  I was testing to make sure I could access the API, and realized that I couldn't figure out the second API call.  That had me thinking that I needed to abstract them out to sepearate allRestaurants.js and restaurant.js files.  But I'm not doing that right...
 
 
+// var restaurants = [];
+
+// function loadJSONTest()
+// {
+ 				
+//     $.ajax({
+//         type:'GET',
+//         url: "http://grahamimac.com/inspectionmapper/allrest_id.php?callback=?",
+//         success:function(restos) {
+//         	document.getElementById("placeholder").innerHTML=restos
+//         	var list = []
+//         	for (var i = 0, l = restos.results.length; i < l; i++) 
+//         	{
+//         		var individual = restos.results[i].name;
+//         		list.push(individual);
+//         		restaurants.push(individual)
+
+//         	}
+//         	$('#placeholder').html(list.join(' ') + "Hi!");
+
+//             // Do something with the response
+//         },
+//         dataType:'json'
+//     });
+// }
+
 
 // $(document).ready(function () {
 	
